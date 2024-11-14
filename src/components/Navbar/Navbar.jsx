@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar__container">
-        <Link to="/home">
+        <Link to="/">
           <img src={logo} className="logo" alt="logo" />
         </Link>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="navbar__container__mobile">
           <ul className="navbar__tabs__mobile">
-            <Link className="navbar_links" to="/home" onClick={openMenu}>
+            <Link className="navbar_links" to="/" onClick={openMenu}>
               home
             </Link>
             <Link className="navbar_links" to="/resume" onClick={openMenu}>
