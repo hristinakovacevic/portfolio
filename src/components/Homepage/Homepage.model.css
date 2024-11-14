@@ -1,0 +1,64 @@
+.subcontainer {
+  display: flex;
+  justify-content: center;
+  top: 5em;
+}
+.homepage__container {
+  display: flex;
+
+  justify-content: center;
+}
+
+.homepage__intro {
+  color: var(--title);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  width: 28%;
+  min-width: 200px;
+  padding-left: 2em;
+  position: relative;
+  transition: var(--main-transition);
+  background-color: #000000cf;
+}
+.homepage__picture {
+  background-image: url("../../assets/work-in-nature.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  right: 11em;
+  width: 800px;
+  min-width: 200px;
+  transition: var(--main-transition);
+  z-index: -1;
+}
+
+.homepage__profession {
+  opacity: 50%;
+}
+.homepage__paragraf {
+  text-align: start;
+  margin-top: 2em;
+  width: 80%;
+}
+@media only screen and (max-width: 800px) {
+  .homepage__picture {
+    width: 35vw;
+    height: 50vh;
+    right: 0;
+    top: 14em;
+  }
+  .homepage__intro {
+    left: 4em;
+    padding-top: 3em;
+    top: 5em;
+  }
+}
+@media only screen and (min-width: 798px) {
+  .homepage__picture {
+    width: 40vw;
+    left: -5em;
+  }
+}

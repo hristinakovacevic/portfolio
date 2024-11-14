@@ -1,0 +1,115 @@
+.cv__work-experience h3 {
+  transition: all 0.5s ease;
+}
+.cv__intro__title {
+  text-align: center;
+  padding-left: 2em;
+}
+.cv-img {
+  width: 20%;
+}
+.cv-img:hover {
+  cursor: pointer;
+  background-color: var(--navbar-background);
+  opacity: 50%;
+}
+.cv-img:hover .hover-download {
+  visibility: visible;
+}
+
+.hover-download {
+  transform: translate(-97%, 210%);
+  top: 2em;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+.cv__container {
+  top: 4em;
+}
+.cv__work-experience {
+  max-width: 400px;
+  transition: var(--main-transition);
+  border-left: solid 1px white;
+  border-bottom: solid 1px white;
+  position: relative;
+  top: -3em;
+  padding: 6em 5em 0 2em;
+}
+
+.cv__work-experience h3:hover {
+  cursor: pointer;
+  color: var(
+    --title
+  ); /* Change text color to cyan (or any neon color you like) */
+  text-shadow: 0 0 5px var(--title), 0 0 20px var(--title),
+    /* Larger glow */ 0 0 50px var(--title);
+}
+
+.cv__tech {
+  max-width: 400px;
+  line-height: 2em;
+  border-left: solid 1px white;
+  border-bottom: solid 1px white;
+  padding-left: 4em;
+  padding-bottom: 3em;
+  margin-left: -3em;
+}
+.tech__exp__container {
+  display: flex;
+}
+.cv__intro {
+  display: flex;
+  justify-content: space-between;
+}
+.show-height {
+  min-height: 70vh;
+}
+.hide-height {
+  height: none;
+}
+.show {
+  background-color: var(--dark-gray);
+  width: 30vw;
+  max-width: 350px;
+  padding: 1em;
+  border-radius: 30px;
+}
+.hide {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .tech__exp__container {
+    flex-direction: column;
+  }
+  .cv__work-experience {
+    top: 0;
+    padding: 0 0 0 2em;
+  }
+  .cv__container {
+    position: relative;
+    top: 8em;
+    padding: 0;
+  }
+  .show {
+    width: auto;
+  }
+  .cv__tech {
+    position: relative;
+    padding: 0 0 0 2em;
+    top: 2em;
+    left: 3em;
+    border-bottom: none;
+    border-top: solid 1px white;
+  }
+  .a-wrap {
+    display: none;
+  }
+}
+@media only screen and (min-width: 790px) {
+  .cv__container {
+    top: 4em;
+    position: relative;
+  }
+}

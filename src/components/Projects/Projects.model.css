@@ -1,0 +1,20 @@
+.project__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2em;
+  height: 40vh;
+  top: 10em;
+  position: relative;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  transition: var(--main-transition);
+  gap: 3em;
+}
+@media only screen and (max-width: 800px) {
+  .project__container {
+    display: none;
+    padding: 0;
+  }
+}

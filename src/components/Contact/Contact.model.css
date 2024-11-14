@@ -1,0 +1,16 @@
+.contact__container {
+  display: flex;
+  flex-direction: column;
+}
+.contact__container p:nth-child(2)::before {
+  content: url("../../assets/email.svg");
+  padding-right: 1em;
+}
+.contact__container p:nth-child(3)::before {
+  content: url("../../assets/phone.svg");
+  padding-right: 1em;
+}
+.contact__container p:nth-child(4)::before {
+  content: url("../../assets/location.svg");
+  padding-right: 1em;
+}
