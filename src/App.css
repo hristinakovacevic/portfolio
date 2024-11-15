@@ -13,6 +13,11 @@
   --dark-gray: #4f4e4b;
   --main-transition: all 1s ease;
 }
+html,
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure they don't exceed the screen width */
+}
 body {
   font-size: calc(12px * ((100vw - 300px) / (1600 - 300)));
 }

@@ -1,8 +1,11 @@
 import React from "react";
 import "./Homepage.model.css";
-import Projects from "../Projects/Projects";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
+  function openInNewWindow() {
+    window.open("https://todo-app-two-liard.vercel.app/");
+  }
   return (
     <div className="container">
       <div className="subcontainer">
@@ -20,7 +23,15 @@ const Homepage = () => {
             </p>
           </div>
           <div className="homepage__picture"></div>
-          <Projects />
+          <div className="project__container  ">
+            <h2>Projects</h2>
+            <Link className="navbar_links" onClick={openInNewWindow}>
+              Todo app
+            </Link>
+            <Link className="navbar_links" to="/projects/cupshop">
+              Cupshop
+            </Link>
+          </div>
         </div>
       </div>
     </div>

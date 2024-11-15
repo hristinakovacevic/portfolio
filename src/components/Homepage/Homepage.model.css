@@ -34,7 +34,20 @@
   transition: var(--main-transition);
   z-index: -1;
 }
-
+.project__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2em;
+  height: 40vh;
+  top: 10em;
+  position: relative;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  transition: var(--main-transition);
+  gap: 3em;
+}
 .homepage__profession {
   opacity: 50%;
 }
@@ -47,13 +60,16 @@
   .homepage__picture {
     width: 35vw;
     height: 50vh;
-    right: 0;
-    top: 14em;
+    right: 42px;
+    top: 4em;
   }
   .homepage__intro {
-    left: 4em;
-    padding-top: 3em;
+    left: 2em;
+
     top: 5em;
+  }
+  .project__container {
+    display: none;
   }
 }
 @media only screen and (min-width: 798px) {

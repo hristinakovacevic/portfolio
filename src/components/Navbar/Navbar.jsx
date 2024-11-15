@@ -28,7 +28,7 @@ const Navbar = () => {
         </Link>
 
         <ul className="navbar__tabs">
-          <Link className="navbar_links" to="/home">
+          <Link className="navbar_links" to="/">
             home
           </Link>
           <Link className="navbar_links" to="/resume">
@@ -61,12 +61,15 @@ const Navbar = () => {
               resume
             </Link>
 
+            <Link className="navbar_links" to="/projects" onClick={openMenu}>
+              projects
+            </Link>
             <Link className="navbar_links" to="/contact" onClick={openMenu}>
               contact
             </Link>
             <div className="social-media-mobile">
-              <img src={githubLogo} alt="github logo" />
-              <img src={linkedIn} alt="linkedIn logo" />
+              <img src={githubLogo} alt="github logo" onClick={openGithhub} />
+              <img src={linkedIn} alt="linkedIn logo" onClick={openLinkedin} />
             </div>
           </ul>
         </div>
