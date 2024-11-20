@@ -18,6 +18,9 @@ const Projects = () => {
         <Link className="navbar_links" to="/projects/cupshop">
           Cupshop
         </Link>
+        <Link className="navbar_links" to="/projects/chat-app">
+          Chat app
+        </Link>
       </div>
     </>
   );

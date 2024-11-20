@@ -3,9 +3,10 @@
   justify-content: center;
   top: 5em;
 }
+
 .homepage__container {
   display: flex;
-
+  height: 100vh;
   justify-content: center;
 }
 
@@ -22,6 +23,7 @@
   transition: var(--main-transition);
   background-color: #000000cf;
 }
+
 .homepage__picture {
   background-image: url("../../assets/work-in-nature.jpg");
   background-position: top;
@@ -34,6 +36,7 @@
   transition: var(--main-transition);
   z-index: -1;
 }
+
 .project__container {
   display: flex;
   flex-direction: column;
@@ -48,30 +51,40 @@
   transition: var(--main-transition);
   gap: 3em;
 }
+
 .homepage__profession {
   opacity: 50%;
 }
+
 .homepage__paragraf {
   text-align: start;
   margin-top: 2em;
   width: 80%;
 }
+
 @media only screen and (max-width: 800px) {
+
+  .homepage__container,
+  .subcontainer {
+    width: inherit;
+  }
+
   .homepage__picture {
     width: 35vw;
     height: 50vh;
     right: 42px;
     top: 4em;
   }
-  .homepage__intro {
-    left: 2em;
 
+  .homepage__intro {
     top: 5em;
   }
+
   .project__container {
     display: none;
   }
 }
+
 @media only screen and (min-width: 798px) {
   .homepage__picture {
     width: 40vw;

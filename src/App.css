@@ -1,30 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   font-family: "Montserrat", sans-serif;
-
+  box-sizing: border-box;
   font-weight: 400;
   font-style: normal;
   color: var(--title);
   letter-spacing: 1px;
 }
+
 :root {
   --navbar-background: #0d0d0d;
   --title: #ffffff;
   --dark-gray: #4f4e4b;
   --main-transition: all 1s ease;
 }
+
 html,
 body {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 100%; /* Ensure they don't exceed the screen width */
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+  width: 100%;
+  /* Ensure they don't exceed the screen width */
 }
+
 body {
   font-size: calc(12px * ((100vw - 300px) / (1600 - 300)));
 }
+
 img {
   box-shadow: -19px 20px 6px 1px #00000036;
   transition: all 0.5s ease;
 }
+
 img:hover {
   cursor: pointer;
 
@@ -34,7 +42,7 @@ img:hover {
 .container {
   position: absolute;
   background-color: var(--navbar-background);
-  min-height: 100vh;
+
   width: 100%;
   top: 0;
   left: 0;
@@ -42,6 +50,7 @@ img:hover {
   justify-content: center;
   z-index: 0;
 }
+
 .content__container {
   display: flex;
   align-items: center;

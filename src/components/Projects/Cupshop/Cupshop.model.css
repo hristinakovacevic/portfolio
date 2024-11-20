@@ -1,6 +1,7 @@
 .cupshop__container {
   flex-direction: column;
 }
+
 .text__container {
   display: grid;
   grid-template-columns: 2fr 2fr;
@@ -8,12 +9,14 @@
   color: var(--title);
   gap: 2em;
 }
+
 .text__container h2:nth-child(1),
 .text__container h2:nth-child(3),
 .text__container h2:nth-child(5),
 .text__container h2:nth-child(7) {
   color: var(--title);
 }
+
 .text__container div {
   border-left: solid 1px white;
   border-bottom: solid 1px white;
@@ -21,18 +24,21 @@
   max-width: 500px;
   padding-left: 2em;
 }
+
 .img__container {
   display: flex;
   justify-content: space-evenly;
   max-width: 800px;
   min-width: 250px;
 }
+
 .img__container img {
   width: 10vw;
   min-width: 100px;
   position: relative;
   bottom: 3em;
 }
+
 .img__container img:hover {
   cursor: pointer;
 }
@@ -41,7 +47,7 @@
   display: flex;
   flex-direction: column;
   padding: 3em;
-  top: 85px;
+  padding-top: 11em;
   gap: 2em;
   position: relative;
 }
@@ -49,10 +55,12 @@
 .cupshop-img:hover {
   cursor: pointer;
 }
+
 @media screen and (max-width: 600px) {
   .text__container {
     grid-template-columns: 3fr;
   }
+
   .text__container div {
     width: inherit;
   }
