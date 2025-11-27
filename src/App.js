@@ -12,7 +12,7 @@ import ChatApp from "./components/Projects/ChatApp/ChatApp";
 
 function App() {
   return (
-    <div className="App">
+    <div className="main">
       <Router>
         <Navbar />
         <Routes>

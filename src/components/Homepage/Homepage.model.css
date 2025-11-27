@@ -25,7 +25,7 @@
 }
 
 .homepage__picture {
-  background-image: url("../../assets/work-in-nature.jpg");
+  background-image: url("../../assets/HCportfolio.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,8 +43,8 @@
   align-items: center;
   justify-content: center;
   padding-right: 2em;
-  height: 40vh;
-  top: 10em;
+
+  top: 5em;
   position: relative;
   border-bottom: 1px solid;
   border-right: 1px solid;

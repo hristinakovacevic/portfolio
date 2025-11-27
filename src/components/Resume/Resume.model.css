@@ -1,14 +1,32 @@
 .cv__work-experience h3 {
   transition: all 0.5s ease;
+
 }
 
 .cv__intro__title {
-  text-align: center;
-  padding-left: 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 0 3em;
+
+
 }
 
 .cv-img {
   width: 20%;
+}
+
+.cv__item {
+  position: relative;
+}
+
+.cv__item-content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 10;
 }
 
 .cv-img:hover {
@@ -21,8 +39,69 @@
   visibility: visible;
 }
 
+.a-wrap.glow-link {
+  position: relative;
+
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+}
+
+.content__container {
+  display: flex;
+
+}
+
+.cv__intro__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Svetleći border koji se s vremena na vreme pojavi */
+.a-wrap.glow-link {
+
+
+
+  border-radius: 10px;
+  padding: 2em;
+  pointer-events: none;
+
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.55);
+
+  opacity: 1;
+  animation: glowPulse 2s infinite ease-out;
+  z-index: -1;
+}
+
+
 .hover-download {
-  transform: translate(-97%, 210%);
+  font-weight: 500;
+
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 1;
+
+  }
+
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.hover-download {
+
   top: 2em;
   position: relative;
 }
@@ -38,12 +117,12 @@ a {
 
 .cv__work-experience {
   max-width: 400px;
-  transition: var(--main-transition);
+  margin-bottom: 2em;
   border-left: solid 1px white;
   border-bottom: solid 1px white;
   position: relative;
-  top: -3em;
-  padding: 6em 5em 0 2em;
+
+  padding: 0 3em;
 }
 
 .cv__work-experience h3:hover {
@@ -62,11 +141,12 @@ a {
   border-bottom: solid 1px white;
   padding-left: 4em;
   padding-bottom: 3em;
-  margin-left: -3em;
+
 }
 
 .tech__exp__container {
   display: flex;
+  justify-content: space-between;
 }
 
 .cv__intro {
@@ -74,13 +154,7 @@ a {
   justify-content: space-between;
 }
 
-.show-height {
-  min-height: 70vh;
-}
 
-.hide-height {
-  height: none;
-}
 
 .show {
   background-color: var(--dark-gray);

@@ -21,6 +21,12 @@ const Projects = () => {
         <Link className="navbar_links" to="/projects/chat-app">
           Chat app
         </Link>
+        <Link className="navbar_links" to="/projects/ecobloom">
+          Ecobloom
+        </Link>
+        <Link className="navbar_links" to="/projects/winary">
+          Winary
+        </Link>
       </div>
     </>
   );

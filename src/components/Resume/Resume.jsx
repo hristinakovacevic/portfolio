@@ -1,13 +1,28 @@
-import React from "react";
-import cv from "../../assets/hristina-cirovic-cv.png";
-import { Link } from "react-router-dom";
 import Item from "./Item";
+import { motion } from "framer-motion";
 import "./Resume.model.css";
 
 const Resume = () => {
   function openNew() {
     window.open("https://github.com/hristinakovacevic/");
   }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
+  const containerVariants = {
+    visible: {
+      // This transition tells the parent to stagger its direct children
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.7,
+      },
+    },
+  };
   let internship = {
     id: "e9ad3efe-5174",
     title: "Internship - Frontend Developer, Quantox Technology ",
@@ -40,24 +55,35 @@ const Resume = () => {
     ],
   };
   return (
-    <div className="container">
-      <div className="content__container">
+    <div>
+      <div>
         <div className="cv__container">
-          <div className="cv__intro">
-            <div className="cv__intro__title">
-              <h1>Hristina Cirovic</h1>
-              <h3>Frontend developer</h3>
-            </div>
-            <a
-              href="/Resume.pdf"
-              download="Hristina_Cirovic_Resume.pdf"
-              className="a-wrap"
+          <motion.div
+            className="tech__exp__container"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              variants={itemVariants}
+              className="cv__intro__container"
             >
-              <span className="hover-download">Download resume</span>
-            </a>
-          </div>{" "}
-          <div className="tech__exp__container">
-            <div className="cv__work-experience">
+              <div className="cv__intro__title">
+                <h1>Hristina Cirovic</h1>
+                <h3>Frontend developer</h3>
+              </div>
+              <div className="cv__intro">
+                <a
+                  href="/Resume.pdf"
+                  download="Hristina_Cirovic_Resume.pdf"
+                  className="a-wrap glow-link"
+                >
+                  Download resume
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="cv__work-experience">
               <h2 className="cv__title">Work experience</h2>
 
               <Item
@@ -78,9 +104,9 @@ const Resume = () => {
                 date={developerAtS.date}
                 text={developerAtS.text}
               />
-            </div>
+            </motion.div>
 
-            <div className="cv__tech">
+            <motion.div className="cv__tech" variants={itemVariants}>
               <h2 className="cv__title">Technical Skills</h2>
               <ul>
                 <li>HTML, CSS3 (Flexbox & Grid), JavaScript</li>
@@ -93,8 +119,8 @@ const Resume = () => {
                 <li>Git, GitHub, Jira, Postman</li>
                 <li>Figma, Adobe Photoshop</li>
               </ul>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>
