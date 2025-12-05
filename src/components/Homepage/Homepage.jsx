@@ -1,11 +1,19 @@
-import React from "react";
 import "./Homepage.model.css";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useMotionValue } from "framer-motion";
 
 const Homepage = () => {
   function openInNewWindow() {
     window.open("https://todo-app-two-liard.vercel.app/");
   }
+  function openEcoBloom() {
+    window.open(
+      "https://www.figma.com/design/ZvivImzDx4z1Eqc5uJkgw2/EcoBloom?node-id=1001-1130&t=HMBWmo5MM31QWBdv-1"
+    );
+  }
+
+  const x = useMotionValue(30);
   return (
     <div className="container">
       <div className="subcontainer">
@@ -22,7 +30,16 @@ const Homepage = () => {
               digital experience.
             </p>
           </div>
-          <div className="homepage__picture"></div>
+          <motion.div
+            animate={{
+              style: { x, rotate: 90, originX: 0.5 },
+            }}
+            className="homepage__picture"
+          ></motion.div>
+          <motion.circle
+            animate={{ r: 10 }}
+            onAnimationStart={(latest) => console.log(latest.r)}
+          />
           <div className="project__container  ">
             <h2>Projects</h2>
             <Link className="navbar_links" onClick={openInNewWindow}>
@@ -34,11 +51,8 @@ const Homepage = () => {
             <Link className="navbar_links" to="/projects/chat-app">
               Chat app
             </Link>
-            <Link className="navbar_links" to="/projects/ecobloom">
+            <Link className="navbar_links" onClick={openEcoBloom}>
               Ecobloom
-            </Link>
-            <Link className="navbar_links" to="/projects/winary">
-              Winary
             </Link>
           </div>
         </div>

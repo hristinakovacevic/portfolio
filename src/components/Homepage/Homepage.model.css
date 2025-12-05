@@ -34,7 +34,9 @@
   width: 800px;
   min-width: 200px;
   transition: var(--main-transition);
+  box-shadow: 3px 8px 40px 4px #262a3b;
   z-index: -1;
+
 }
 
 .project__container {

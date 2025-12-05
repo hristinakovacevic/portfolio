@@ -15,6 +15,10 @@
   width: 20%;
 }
 
+.cv__item-header {
+  cursor: pointer;
+}
+
 .cv__item {
   position: relative;
 }
@@ -23,7 +27,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgb(46, 43, 198);
   padding: 1rem;
   border-radius: 8px;
   z-index: 10;
@@ -112,7 +116,7 @@ a {
 
 .cv__container {
   position: relative;
-  padding-top: 11em;
+  padding-top: 8em;
 }
 
 .cv__work-experience {
@@ -121,18 +125,22 @@ a {
   border-left: solid 1px white;
   border-bottom: solid 1px white;
   position: relative;
-
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding: 0 3em;
 }
 
-.cv__work-experience h3:hover {
+.cv__item-header h3:hover {
   cursor: pointer;
   color: var(--title);
-  /* Change text color to cyan (or any neon color you like) */
+
   text-shadow: 0 0 5px var(--title), 0 0 20px var(--title),
-    /* Larger glow */
+
     0 0 50px var(--title);
 }
+
+
 
 .cv__tech {
   max-width: 400px;
@@ -147,6 +155,7 @@ a {
 .tech__exp__container {
   display: flex;
   justify-content: space-between;
+  gap: 5em
 }
 
 .cv__intro {
@@ -170,6 +179,7 @@ a {
 
 @media only screen and (max-width: 800px) {
   .tech__exp__container {
+    display: flex;
     flex-direction: column;
     gap: 2em;
   }
@@ -180,7 +190,7 @@ a {
   }
 
   .cv__container {
-    position: relative;
+    /* position: relative; */
     padding: 10em 0;
   }
 
@@ -189,7 +199,7 @@ a {
   }
 
   .cv__tech {
-    position: relative;
+    /* position: relative; */
     padding: 0 0 0 2em;
 
     left: 3em;
