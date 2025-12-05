@@ -15,12 +15,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run prebuild && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "prebuild": "npm run lint",
-    "build": "npm run prebuild && react-scripts build"
+    "prebuild": "npm run lint"
   },
   "eslintConfig": {
     "extends": [
